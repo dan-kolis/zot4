@@ -1,0 +1,34 @@
+.. _index11:
+
+Test-eight
+===========
+
+.. toctree::
+
+    covid_and_commercial_buildings
+    new_physics_and_Covid_19
+    pure_style_experiments
+
+This is a set made after the USA election 2020 day.
+
+.. This is possible a ignore comment line
+
+
+
+
+.. why; Whats this all about, introductory usually.
+.. thf; The Future; Covid-19 short term predictions not until 2025.
+.. acp; About cold plasma; History and background.
+.. ela; Elevators A; Dialog about elevators generally.
+.. els; Elevators slow; Slow down building usage.
+.. jpp; Just Prototype plans; Name and enumeration of prototypes, esp airflow affectors.
+.. whi; Whos in; Potential partners.
+.. its; Iteration cycle; How to move ideas ot outcomes.
+.. vao; Valuation outlook; does experimentation change valuation of founder companies.
+.. hmw; How much and when. Two big questions, never answered entirely is the correct touch.
+.. dah; Dan says hi; About me.
+.. whs; Why slow; Why did this develop so slowly.
+
+
+
+

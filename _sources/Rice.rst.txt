@@ -1,0 +1,12 @@
+.. _lblrice:
+
+====================
+Rice
+====================
+
+**Go to Rice**
+
+<http://protinfo.compbio.buffalo.edu/rice/>
+
+
+

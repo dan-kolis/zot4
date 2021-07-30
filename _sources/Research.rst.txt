@@ -1,0 +1,92 @@
+==========================
+Research
+==========================
+
+
+.. raw:: html
+
+  <h2>CompBio research</h2>
+
+
+The general area of our scientific research is computational biology, genomics, and proteomics. 
+The goal is to elucidate processes responsible for protein, small molecule, nucleic acid, and interactome structure, 
+function, interaction, evolution, and design so as to understand (and reproduce by computing simulation) how the 
+information encoded by the genome of an organism specifies behavior and characteristics in the context of its environment.
+
+Our research leads us to tackle computational problems in algorithmic studies of astronomically large spaces, 
+bioinformatics/data mining, and massively parallel and distributed computing. The work described in the publications is 
+generally encapsulated into a variety of webservers/applications/services (links included) and downloadable software. 
+A full reverse chronologically ordered list of the publications is available as part of my CV. More significant publications 
+are denoted by * along with other annotations such as an accompanying cover or introductory article signifying the 
+notability of a publication so that people may use this as a guide to help focus their studies.
+
+Key areas and select publications
+**************************************
+Structural and functional studies of biologically important proteins, systems, and problems. Use the structure and function prediction tools developed by us to help guide experimentalists in manipulating proteins and extracting information about their function and structure in vivo, both at the single molecule as well as at the genomic/systems levels. Some key areas include work on therapeutic (inhibitor) discovery and nanobiotechnology. This work is usually done in collaboration with experimentalists. I list these papers first since they demonstrate a true application of the work we do. In many cases, these are prospective verification (i.e., a prediction is made before the answer is known and verified).
+
+Application
+**************
+Structural and functional studies of biologically important proteins, systems, and problems. Use the structure and function prediction tools developed by us to help guide experimentalists in manipulating proteins and extracting information about their function and structure in vivo, both at the single molecule as well as at the genomic/systems levels. Some key areas include work on therapeutic (inhibitor) discovery and nanobiotechnology. This work is usually done in collaboration with experimentalists. I list these papers first since they demonstrate a true application of the work we do. In many cases, these are prospective verification (i.e., a prediction is made before the answer is known and verified).
+
+.. raw:: html
+   :file: refs_application.text
+
+Evolution
+***********
+We use our prediction protocols to explore early evolution and origin of life issues.
+
+.. raw:: html
+   :file: refs_evolution.text
+
+Systems
+***********
+Application and integration of single molecule structure and function prediction techniques 
+to whole genomes and proteomes in an integrated manner. Combine single molecule and 
+genomic/proteomic data to to explore the relationships among the molecular and organismal
+(systems) worlds and create a comprehensive picture of the relationship between genotype
+and phenotype.
+
+.. raw:: html
+   :file: refs_systems.text
+
+Interaction
+************
+Methods for predicting interactions between molecules.
+
+.. raw:: html
+   :file: refs_interaction.text
+
+Function
+***********
+Generally applicable methods for predicting protein function from sequence and/or structure.
+
+.. raw:: html
+   :file: refs_function.text
+
+Structure
+***********
+**De novo protein structure prediction**
+
+The basic paradigm is to sample the conformational space exhaustively or 
+semi-exhaustively such that native-like conformations are observed. These conformations 
+are selected using the all-atom based scoring functions. Some methods have had 
+good success in the CASP blind prediction experiments.
+
+.. raw:: html
+   :file: refs_structure.text
+
+Infrastructure
+****************
+We prefer to make our clusters from cheap components that can be readily 
+discarded, and prefer to completely decentralize our systems. Also 
+included in this category are algorithms developed to handle the scientific problems 
+we face.
+
+.. raw:: html
+   :file: refs_infrastructure.text
+
+
+
+
+
+

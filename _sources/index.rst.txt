@@ -1,0 +1,129 @@
+==========================================================================================
+Beyond Warming - Improved Weightless food service by repurposing temperatures and sauces
+==========================================================================================
+
+
+A device is proposed to handle pre-prepared and novel cuisine offerings that use 
+electronics to control temperature and enhance visual presentation. Heat can be both
+added and removed using a semiconductor platen. The range of temperature is bounded
+between -15 C and 200 C and the portion size is generally a single adult serving.
+
+Food prepared for using this apparatus in flight has packaging and configuration 
+modalities to allow the mix and match of sauces to base meals while retaining layering
+familiar in prepared cuisines. The concept of a 'sauce' is extended somewhat to
+include layers of additional edible products; In the context of extending the types
+of foods and maximizing there appeal possible, the so called sauces are more important 
+then there role in ordinary food preparation. 
+
+Opened packages built with stabilized foods, ( using inert gases ) can be subsequently 
+chilled to extend there palatable status until enjoyed. 
+
+The innovation involves a single device combining some aspects of a wok, refrigerator, 
+oven and table setting into one single user device. 
+
+This is 'Beyond warming'; The viscosity of sauces and their offered surface tension is 
+utilized to enable previously hard to provision foods like eggs, pancakes and waffles. 
+
+Well constructed sauces of all sorts supplement water infused vaccum packet portions 
+in weightlessness. 
+
+The sauces are provisioned in prepared packages which disappear into the servings, 
+they are constructed of casien, an edible milk by-product. 
+
+A longer term agenda is built into a serving controlling apparatus along these lines quite naturally. Locally grown or synthesized products may benefit from reduced temperature. By possibly interfacing to a space heat sinked manifold, energy expenditures can be made trivial.   All sorts of food prep tricks can be folded into the idea. The goal is a pan like closed device of considerable flexibility. But the secret, like the old saying, is in the sauce...
+
+
+*******************************************
+dbk1 A link closest to a real release perhaps
+*******************************************
+I think this one was posted to my Dan K Cloud thing for a Teleconf show 
+and tell on 23 Nov 2020. Since then I fixed some spelling errors, etc; 
+And a little first try at versioning too...
+
+:ref:`compBioOp9p63`
+
+Nothing matters as much as the **index.html page** for the first impression, 
+so probably its always a sacred, hand fussed over. usually edited a little, file.
+
+This *doesn't* mean its endlessly clobbered, lost and rekeyed.
+It means the people doing the work, should decide and do something to make this
+compatible with what their doing; For instance: Just setting a 
+believed in index.html to **read only**, so its
+persists, or have a script copy it over... fixes this issue...
+
+But its a generalized thing to be managed.
+
+**********************
+dbk2 Worked examples
+**********************
+Here's the endlessly tweaked single .rst to .html file of how the compile makes 
+effects, and so on:
+
+:ref:`Using_sphinx_worked_examples`
+
+  Note: Its **intentionally** referred with a label, not the heading itself, so
+  if you make a boo boo and lose the conf.py file it will stll connect.
+
+    **The conf.py file is important !**
+
+  The worked example file has 'real adult' rev control, the rest of the heap of
+  files here doesn't. versioning in conf.py doesn't really seem to be exposed a
+  lot in reality. its set to 0.0.1 to imply its not doing anything yet.
+
+In case the conf.py with the id of this work, etc a few changed lines gets lost,
+a **backup** file is named: conf.ImaBackupFile
+
+
+********************************
+dbk3 Jump table to alternatives
+********************************
+Here's a short list of 'top level like' files as links for you to enjoy
+
+**Of course** Titles are duplicated and there are ones with syntax errors 
+and "dunno" here and there. There dont have HTML:// yet as there not published
+to a real server, but the chaining is the same and local authoring is a lot
+more efficient then endless round trips to servers !
+
+*************************************
+dbk4 Index XX links of all sorts
+*************************************
+A heap of bunch of messy tries at the top level indexing concepts:
+:ref:`index01`
+:ref:`index02`
+
+This is probably a good number of these to leave lurking around 
+for thinking and testing.
+Just clobber any one you think is stupid or has proved its point 'as you go'.
+Of course their in no specific order.
+
+Then the one that's 'really magically right' might be copied over index.html
+
+**OR**
+
+You use some other redirection concept on your server, and its HTML rewrites 
+so you generate the right user experience, and leave yourself with one a one line
+change for pointing to entire WWW sets, in case of mistakes, ass on fire fixes,
+etc.
+
+***********************
+dbk5 Getting at me
+***********************
+You can email me at: dankolis@gmail.com 
+I will help you do whatever it is you want to do, figure out, etc.
+
+
+---------------------------------------
+dbk6 Version this index file diff mark
+---------------------------------------
+Done by Dan Kolis 30 Nov 2020 13:07 E 
+
+This is *Not* official version control. its just well, when I did it as they say
+in **ISO 9000** it's for **Reference only**, whatever that is suppose to mean
+nobody knows exactly...
+
+
+
+
+
+
+

@@ -1,0 +1,862 @@
+.. _Using_sphinx_worked_examples:
+
+=====================================
+Using Sphinx - Worked examples
+=====================================
+
+
+.. _aboutsphinx1:
+
+About Sphinx
+--------------
+  Sphinx is a **documentation generator**; 
+  in which human readable text can be compiled to create various published kinds of output
+  sets. Its is written in Python, and any operating system that can run Python 3.X correctly
+  can convert prepared files to ready to publish sets created with one click. 
+  A specific functionality of interest to everyone is making HTML for WWW browser communication. 
+  LaTeX is a non-trivial second output  possibility, usually rendered somewhat indirectly to 
+  make a PDF file for each publishing project.
+
+  Sphinx converts **reStructuredText** into the outputs; (visualize HTML for the moment), 
+  These input files by convention have an 'extension' of .rst. There is a one to one
+  correspondence between .rst inputs and .HTML files; but support involves hundreds of files
+  to support a built in search engine and a navigation system. The output is ready for a single
+  point of contact with a server program like Apache. This usual top level interface point
+  begins as file: **index.html**, which is exactly the usual expectation for distribution on
+  internet.
+
+  Images are supported perfectly well, and embedded WWW experiences like video can be configured
+  with a little focused effort, using IFRAMES, or RAW, two ways to extend Sphinx without
+  'real' Python programming and the effort to integrate it.
+
+  **My opinion regarding extensions of functionality:** is that there is no compelling reason 
+  to turn every publishing project into a parallel software support project. A simple setting 
+  of some **single global variable** to TRUE pr FALSE and reading and **applying the directions 
+  carefully** can do 99% of anything rational, with absolutely no programming whatsoever.
+
+
+.. _morefeatures:
+
+Enabling features and comments about extensions
+--------------------------------------------------
+Using the markdown language of **reStructuredText** files, Sphinx is extensible by hooking
+new features in via Python libraries. **Extensions**, for example – improve the functionality 
+for exports for documentation of computer programs from base source code, and the rendering 
+of even the most obscure mathematical notations, (to name two scoped fields of enhancement). 
+
+A single file tucked in with the .rst set file: **conf.py** is small but very important.
+Huge pieces of functionality are turned **off** by default, but can be enabled by changing
+a single variable's values to True from either non-existence, or a default setting of False.
+
+This file is *not* read as a file by the Sphinx program, it's suddenly part of the executable
+itself. Some options involve, for instance, setting dictionary elements to global constants.
+However, simply setting a predefined variable name to True or False, is by far the most common
+control point to enable a line item of functionality.
+
+Many Book-specific concepts like sections, chapters and footnotes are supported without 
+requiring extensions; and even glossaries and other lexicons of various kinds are enabled 
+by setting Sphinx to make JSON files to enable these possibilities.
+
+Versioning and display of authorship for each .rst file is an interesting switchable
+functionality. A fine; **'ready to go' without extension**, capability. 
+And even more control is available with some Python add-in's along these lines.
+
+Non existence or incorrect placement of this file is a serious problem. If it is not found,
+the package will not produce results. The error message on TTY is:
+
+.. centered::
+  **Application error: config directory doesn't contain a conf.py file**
+
+
+.. _docw1:
+
+The Official documentation is a bit weird
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **'Official'** documentation seems oddly hard to actually use. 
+
+This HUMAN READABLE worked example is a single file, showing only things that 
+**WORK 100% in each how-to chunk of knowledge**; Each with a (hopefully), clear explanation. 
+
+The file: **Using_sphing_worked_examples** is the .rst and presumably the same named HTML and/or
+other output rendering.
+You will want to look at **the code itself**, along with what it produces, here. 
+
+.. centered::
+  **Don't look at the output alone. Look at what made it.**
+
+This specific reference is the best I found for usability, Many other's are somewhat misleading:
+<http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>
+
+
+.. _cfriend11:
+
+Copy and paste is your friend
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The mix of different syntaxes and importance of whitespace makes it frustrating to try for 
+each visual effect the first time you attempt it.
+Cut and paste of the **actual text that created this worked example**, is much more productive 
+then a protracted cycle of Google searches.
+
+
+.. _terminology1:
+
+Important terminology
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instructions will tell your about **Docutils** which is a markdown notation that existed long before
+Sphinx. This is basically about a fat library of Python that is called for **some, 
+but not all** markdown / markup. 
+
+
+.. _termessent11: 
+
+More terminology essentials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**reStructuredText** is the slight upgrade to **Docutils** markup and it's abbreviated **reST**.
+Don't be too worried about it, Remember if something is ignored, the file: **conf.py** often
+turns on and off the function that does not do what you expect.
+
+
+.. _headsup1:
+
+Heads up ! About toctree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you're maintaining an existing publishing project, perhaps you do not need to understand the 
+tricky **toctree** keyword completely. 
+The scope of this keyword is how propagation of headings and creation of the table of contents 
+is controlled. 
+
+**Even if your work is extensive**, copying and editing what is begun; Is best. Any change to this
+means almost certainly a visit to **every human readable file in the project** and is an undefined 
+commitment in time.
+
+Generally, the toctree 'just do it' magic is kicked in at the start of conversion alone; In the
+file: **index.rst**.
+Scattering *toctree* in other files will make the index content crazy, not better. 
+**Any of the many switches** around it change the project quite a lot. 
+This is serious stuff for getting, or maintaining desired results.
+
+But if you start a project 'from scratch', you will want to experiment with the **toctree** portion before
+committing to a procedure for designing your workflow. 
+
+I suppose a bit of bad news is: **toctree** is beyond the scope of this document entirely.
+
+
+.. _workede1:
+
+=========================================
+Worked examples begin here
+=========================================
+The following material is presented roughly in the order of importance, **starting with flat text** 
+and **concluding with images, lists and footnotes**. **What you need to know most**, is first.
+
+There is no other specific order whatsoever. The goal is to supply you with one file making one 
+HTML point of contact. The two together should enable your contribution to the documentation creation
+and management process.
+
+Sometimes, the actual text to do a thing is shown, other times it is hinted that a look
+at the source file: **Using_sphinx_worked_examples.rst**, is best. This is intentional; Each
+function is exposed one way or the other. The choice is based on how it's (hopefully), easiest 
+for you to get results with the least iterative frustration.
+
+
+.. _para10:
+
+Paragraphs
+----------
+Most of your file content will be flat text broken up with empty lines, marking the gap
+between paragraphs. Sometimes you will want a heading as per the underlined text. 
+
+Sphinx literature says widths should be less then 98 chars wide, but logically the width is more
+often half that and left organized for orderly editing of the ideas. Narrower is better, 
+so that is an abs max. UTF-8 encoding for the many **.rst** files, is best.
+
+Double blank lines are an useful organizational concept. Like HTML and LaTeX, extra lines disappear in
+HTML output entirely. Extra white space for flat text is also correctly removed in HTML output.
+
+You can learn this organically by trying it 'as you go' or by adding file(s) and doing a conversion, 
+then look for your test file, ignoring the rest of the publishing act for the moment.  
+
+**Simple:** Same filename, but different extension, ( **.rst to .html** ). 
+Any file not included in the recursive gets from **index.html** does not earn a place in the index, but
+a little poking and you will find the output it created. This is an easy way to get the look right 
+without thinking about the project in its entirety. Just hack at one file making one piece of HTML
+until your ready to make that appear, typically by adding it to file: **index.rst** of course.
+
+
+.. _comments1:
+
+Comments
+--------
+Comments begin at the left margin; then two spaces, two periods, a space and any text; like this:
+
+ |  .. This is a comment. It does not show up in the converted output. 
+
+Various reuses of the markdown benefit from TWO spaces, not just ONE, though most things that need whitespace
+seem to work with one. Worked examples in 'official' documents use two spaces for fancy whitespace.
+That is, whitespace usee to trigger commands and formatting. Since embedded paragraphs need exact matching,
+spaces are a bit deal to Sphinx.
+
+Also, **no tabs as syntax elements** please. 
+The **reST** spec says:
+    " **Spaces are recommended for indentation, but tabs may also be used. 
+    Tabs will be converted to spaces. Tab stops are at every 8th column** "
+
+    http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#whitespace
+
+Formal documents seem to chat up 3 spaces, but most of the stuff seems to use two. This
+applies to commands and calls to the styling, for regular text of course; A space is a space !
+
+Embedded program examples with tabs are a special case. Maybe tabs are ok in those, try it and decide
+if the wide space equiv looks strange. This issue would certainly complicate reuse in LaTeX too.
+
+
+  .. See this does not go to output. I AM A COMMENT  DRAGONS and Wizards
+
+
+.. _toproj1:
+
+Internal to project jump to clickable points
+----------------------------------------------
+It is possible to jump to any heading in your published work with a **ref** command, and all the details
+like going back with direction arrows, and scrolling are handled perfectly. This example is about
+**Points defined by headings in the project, in any .rst file**. Jumps to http are similar, but not 
+identical.
+
+Heading text as jump to **labels** are **sort of** usable as targets; But if there duplicated, 
+then the conversion process doesn't know **which one** is the intended target. 
+Marking a **jump to point** with a unique name makes it a **label**. This is usually worth the time it 
+takes. There is no liability having an unused label. If you are sure the file needs no or very little
+hopping around, you can decide to just ignore adding labels to headings, but keep it in mind for work
+likely to be maintained 'forever', or for complex works where jumping around is usually indicated
+sooner or later.
+
+**I find proofreading is simplified** to having a known 'look at me for editing' label point open in 
+both a browser and editor anyway. The command to use the click hop point is exactly the same whether 
+it's an added in label or pulled from the flat text of the heading itself.
+
+To create a label in the text before any heading, use this syntax:
+ | .. _elephant13:
+
+Oddly perhaps, you need an empty line before and after the label line, or it will be ignored.
+
+Then, any number of the **ref** keyword(s) can be placed anywhere in the project, like so`:
+ | \:ref\:\`elephant13\`
+
+The conversion shows you have a malformed entry by **coloring the entry funny**, and not supplying the
+target text. 
+..
+To see the **label ref pair** really work, just search for **para10** and see this jump point in the source.
+Here it is working:
+
+:ref:`para10`
+
+
+.. _anote1:
+
+A note box
+-------------------------------
+Some dressy content formatting is very easy to generate, like this box of information with a title.
+Different colors for titles look great, all carefully ready to go:
+
+.. note::
+  This is a note.
+  It is some multiline of flat text starting with 2 spaces in the source after the command name. 
+  If it's long, the program figures out how to break it, 
+  center it, whatever it takes to make it look 'just so'.
+
+
+.. _warning1:
+
+A warning box
+------------------
+Warning, as in: 'do not do this', stuff:
+
+.. warning::
+  This is a warning.
+  There are many so called admonitions like this. Here is a list of them all:
+
+
+.. _admon1:
+
+Admonitions
+------------
+Just substitute this keywork for the kind of box you want, and you will get a colored entry 
+like the above with a different title
+
+
+.. hlist::
+  :columns: 5
+
+  * Dingo
+  * short items
+  * that should be
+  * displayed
+  * horizontally
+  * sorts out nicely
+  * attention 
+  * caution
+  * danger
+  * error
+  * hint
+  * important
+  * note
+  * tip
+  * warning
+  * title
+
+That horizontal self spacing construct is called a **hlist**. It is explained a little further down in
+this worked example file. Note its often just right to dress up a list you might be tempted to render
+as a table. Trying to *get away with* the simplest syntax that does the job, is efficient.
+
+
+.. _someline1:
+
+Some in line text effects
+--------------------------------
+In line text changes entries just a little. Two are STRONG and EMPHASIS, like this example.
+
+  Hey you ! said the :strong:`big dogs friend` with the :emphasis:`fancy eyebrows`.
+
+Please look at the source code. Note these require **backtick** not **single quote"".
+
+
+.. _ablock1:
+
+A code block
+---------------
+Quoted hunk of code have a specific way for presentation. Note there is a *style hint* naming
+the language, which handles some stuff like comments and whitespace. This is listed as 'c' 
+for this example.
+
+.. code-block:: c
+
+  This is a so called Code block. It's like note a lot, but it adds a kind of language hint.
+  Maybe indenting helps.
+    int z = 5;
+
+    z = z + 5;
+    string yup = "test";
+
+
+.. _addingunicode1:
+
+Adding Unicode chars
+--------------------
+Adding copyright symbol and the Euro is explained reasonably well here:
+<https://docs.anaconda.com/restructuredtext/detailed/>
+
+Look for "unicode", it's somewhat buried in some other concept generally.
+
+
+.. _embedded1:
+
+Embedded text tweaks
+----------------------------------------
+Text can be ordained with touch up like this:
+Asterisks one and two do this: *I am one* and **I am Two**
+The first one is italics, the second is bold.
+
+
+.. _indp1:
+
+Indented paragraphs
+----------------------------
+
+This is just left margined two lines, this is one.
+This is two.
+
+But this is multiple indents
+  Two for me.
+  More two for me.
+    Four for me now.
+
+      " Quotes might help sometimes, or just more drums "
+      - Buddy Guy
+
+
+.. _pagetitle1:
+
+Heading special marks for lines around the text
+-------------------------------------------------
+The hierarchy for what is called h1 to h6 headings in HTML involves using certain characters,
+such that a size is associated with a character.
+**A bit of a scrap paper note** might help you as you work, or just commit them to memory. 
+Using them inconsistently will make funny looking headings, which will require correction
+or just look funny forever. The largest to smallest marking characters are:
+
+  \=\=\=\=\=\= Largest, most important
+
+  ----- Next most important heading category
+
+  +++++ Next down
+
+  \*\*\*\* Down again 
+
+  ~~~~~ Smallest
+
+The underline can be **wider** then the text it decorates, but **not** narrower.
+When used both above and below, its count must 'match exactly' or will result in errors,
+and weird rendering. I usually pick three carefully for a project and use them consistently,
+as opposed to overthinking 1 of 6 for every little entry. 
+
+
+.. _samep1:
+
+Simplest link to a same page heading
+---------------------------------------
+All the material about labels and **ref** might leave you unsure about the simplest case.
+Here it is, a clickable reference which pulls the title for a same file heading. 
+
+:ref:`Paragraphs`
+
+But to make links try harder to find where to go, this change (below), is worth doing. 
+If you inherit a working project, its probably already done, but if not, here is how to do it;
+A one line change:
+
+.. code-block:: c
+
+  extensions = [ 'sphinx.ext.autosectionlabel' ]
+
+Some note(s) in the documentation say: "Your version may do this differently". 
+But probably that line can't hurt. AGAIN !  A common reason to have any example not work is the
+absence of a fact or assignment in file: **conf.py** which must be in the ./source directory
+with your text to be converted.
+
+
+.. _golink1:
+
+Going to a link ( local in this case ) with a custom description
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+It's easy to have a a click to point with custom text instead of pulling the heading text itself.
+Like this one, going to **Paragraph** like the previous example, but this has its own description. 
+
+:ref:`About paragraphs for small skunks in the woods <Paragraphs>`
+
+**Important:** Most of these commands require **backtick** not a single quote. 
+That is a backtick for both leading and trailing mark. Also, adding or deleting spaces
+between the lexical elements frequently destroys the functionality of the instruction
+totally. 
+
+
+.. _extlink1:
+
+Links to an external URL
+------------------------------
+Because hypertext is so important, its not surprising a package like this has all 
+sorts of variations to make a URL clickable. You should look at this as source code level, probably. 
+First a URL without a local description:
+
+<http://www.hatbox.com/>
+
+And next, with a re-written description:
+
+`A funny news Network <http://cnn.com>`_
+
+Note the funny use of an underscore. Also a space is required right before the opening < mark.
+
+Next, an inline with text URL <http://www.thesprucepets.com/reasons-ferrets-make-good-pets-1236788> HEY, we
+all know how much fun Ferrets can be around the house.
+
+*Next*, a renamed inline hyperlink: `Stack IS Overflowing <http://stackoverflow.com/>`_ is a source of information,
+both excellent and terrible.
+
+Here is a source of how to information about less common URL access possibilities.
+Examples of this include: Facilities to have a cache, renaming of 'links' to make internal lexicons of 
+URLs, and testing to detect dead links:
+
+<https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html>
+
+**Note:** Even if the server is known to only support **https** I suggest you use **http**
+in the call(s). The multi-pass handshaking will upgrade the crypto better then any hand doodling.
+It will figure out 80 versus 443 and the right crypto. If you are accidentally leaving your session content
+un-encrypted, the fix is on the server side, no here at the client...
+
+
+.. _center1:
+
+Centering
+---------
+Centering anything inherits a little of the mess from from HTML on the same subject.
+
+.. centered::  Whoopee Golberg has fun at work
+
+And a multi line variation:
+
+.. centered::
+  This is a multiple line thing, Its hard to decide if it is really centered correctly.
+  Its important to notice and apply the spaces for indentation.
+
+A look at the source code, as source... is probably best.
+
+
+.. _fixedtext1:
+
+More Fixed Text
+----------------
+Another hint for fixed horizontal space uses the virgule symbol. 
+line started with a virgule, like:
+
+    | A one, two, a one two three four
+    |
+    |
+    | Half a bee, philosophically,
+    |     must, *ipso facto*, half not be.
+    | But half the bee has got to be,
+    |     *vis a vis* its entity.  D'you see ?
+
+
+Notice even multiple CRLF are maintained, usually this is hard to achieve in HTML.
+
+
+.. _orderedpairs1:
+
+Ordered pairs
+-------------
+Ordered pairs can be represented with ease. Since so many computery things are this = that ideas,
+this is quite useful.
+
+:Date: 2001-08-16
+:Version: 1
+:Authors: - Me
+          - Myself
+          - I
+:Indentation: Since the field may be quite long, the second
+   and subsequent lines of the field body do not have to line up
+   with the first line
+:Parameter i: integer
+
+
+.. _csvtables1:
+
+CSV Style tables
+----------------
+There are about three ways to make tables. this one is interesting, 
+a sort of CSV like entry:
+
+.. csv-table:: Frozen Delights!
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+
+These nice entries are at this URL: <https://runawayhorse001.github.io/SphinxGithub/rtxt.html>
+
+
+.. _images1:
+
+Images - JPG PNG presumably
+---------------------------
+Images can be supported with ease, they can be pulled from other directories, but let's start 
+with one in **./source** The same spot as the .rst file doing the calling.
+
+.. image:: rags.jpg 
+
+Note: The extension can be omitted and the packaged tries to find and show the file.
+This also works, see the source code if you want to be sure of this, but here it is to encourage
+you to use the wild card form:
+| .. image:: rags.*
+
+Official documents say the .* find it yourself is preferred so the package 
+can pick the best **.ext** for particular renderings. That is, **.jpg .svg .png** with the same filename
+is specifically supported.
+
+
+.. _images2:
+
+More full featured image inclusion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Here is a more maximal example. Figures can renumber themselves and be referred to with symbolic names too.
+This example is slightly less fell blown then that, however.
+
+.. label:`rocksplatesetc`
+
+.. figure:: happypictures/plates.*
+   :scale: 50 %
+   :alt: Dishware
+   :align: center
+
+   **This is a picture of some dish stuff**
+
+
+This is quite simply achieved, using:
+  | .. figure:: happypictures/plates.*  
+  |   :scale: 50 %  
+  |   :alt: Dishware  
+  |   :align: center  
+
+  |  \*\*This is a picture of some dish stuff\*\*    
+  |
+
+The images are copied and managed into a subdirectory for distribution for you. You
+might want to segregate images as per the above example in a subdirectory, 
+presumably of **./source**
+
+
+.. _codeblock1:
+
+A code block specifically tweaked for HTML
+------------------------------------------------
+Everybody has no choice but to **love** HTML, right ?
+
+.. code-block:: html
+  :caption: Blocks of languages etc can have captions too
+
+    <html>
+        <h1>Hello!</h1>
+    </html>
+
+
+.. _downloads1:
+
+Offer files for downloads
+-------------------------
+Download offered files use the dowenload keyword.
+
+:download:`This is a little picture <happypictures/lifter.png>`.
+
+Probably this varies depending on what the file extension is, ( mime type )
+and browser settings.
+
+Also remember the export is a STATIC file copy. If you want to point to files
+that are dynamic, not part of a publishing action cycle, use URLS outside the 
+hierarchy of this published act, or you will serve up stale files.
+
+This program leaves static files; ( but picks thru them with search, and adds the indexes for you ).
+Still, remember it makes static files in a fat package. Reaching out around the basket of goods is
+completely reasonable.
+
+.. _iframe1:
+
+IFRAME using raw HTML
+---------------------
+The HTML tage IFRAME is hard to use well. Here it is embedding a UTUBE call: 
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe>
+
+Before you implement it, remember securities and so on mean its harder for the user to
+'get at' the URLed entity then offering them a click.
+
+Its messy to explain and offer both options .... Consider the user experience, not the ego idea 
+your code is in the driver's set ! **But it is there to use**.
+
+Also the **raw** for HTML is probably a general ways to do many cute things. If you plan
+to use the set for LaTeX, remember if its HTML only is disappears from paper documents
+entirely.
+
+
+.. _inlinevideo1:
+
+Inline Roles
+------------------------------
+Inline Asterisk changes for BOLD and Italics are fine but there are more text presentation
+mods to apply. The bigger picture way is so called **ROLES** and of course they are inline
+with any active text. Like:
+
+| :rolename:`Mary had a little lamb`.
+
+So, substitute the keyword below ( ex. *literal* ), for **rolename** as above, and will get the effect.
+
+**Docutils rules** supports the following roles:
+
+• emphasis – equivalent of *emphasis*
+• strong – equivalent of **strong**
+• literal – equivalent of ``literal``
+• subscript – subscript text
+• superscript – superscript text
+• title-reference – for titles of books, periodicals, and other materials
+
+So this should make a emphasis :emphasis:`Different` it should be.
+
+Lets look at titles as in: :title-reference:`Aesops Fables` a book about kid stuff.
+
+**REMEMBER** you need the funny backticks, not usual quotes!
+
+
+.. _footnotes1:
+
+Footnotes
+----------
+Footnotes are examples of the sort of **improvised syntax** of this markup language. Since you do **want**
+to use this fancy stuff, this worked example is important. The ways its communicated here is:
+  * Clear example usage
+  * Screen shot of the .rst to do it.
+
+Since the place its **called** and where the text is **defined** are in different places dynamically
+in the source text, its not so easy to be sure you 'get it', so the screen print will help!
+
+The precedent is nearly identical to our plaintiff's situation [#f1]_ , which might help us in
+the proceeding tomorrow.
+
+
+.. _footnotesmore1:
+
+Elsewhere
+~~~~~~~~~
+The reference *to* it can be used any number of times, and where it lands in the HTML is here 
+the command **rubric* appears
+
+Various presenters like the style in the case discussed yesterday [#f1]_, though it was in a 
+different jurisdiction.
+
+.. rubric:: Footnotes
+
+.. [#f1] Caulfield versus Baldwin (1994) 96 Cr App R 215.
+
+
+.. label:`reffootnote`
+
+.. figure:: happypictures/aboutfootnotes.jpg
+   :scale: 50 %
+   :alt: About footnotes
+
+   **This is how Footnotes work**
+
+**Important** Of course usually the last part is at the bottom of a HTML page, like a paper page. 
+What is an endnote versus footnote and how this helps re-use in LaTeX needs your attention to detail.
+
+
+.. _citations1:
+
+Citations
+-----------
+Citations are quite different looking then footnotes. Documents suggest avoiding Using leading numbers
+in the symbol names. Usable as per this example:
+
+The gas giant [Uatrn12002]_, is more active then predicted from the current theory.
+
+.. [Uatrn12002] Q'tahL-1997 Class 7 Gas giant
+
+
+.. _math1:
+
+Math
+-------
+Math inclusions:
+
+:math:`a^2 + b^2 = c^2`
+
+There is a more involved way to invoke math inclusions. This is entry level for math stuffola.
+
+
+.. _abbr1:
+
+Abbreviations
+----------------
+Abbreviations have specific font support, like:
+
+Like :abbr: `LASER (Light Amplification Stimulated Emission Radiation)`
+
+
+.. _hhlist1:
+
+Horizontal lists
+-------------------
+Horizontal lists are easy enough:
+
+.. hlist::
+  :columns: 3
+
+  * A list of
+  * short items
+  * that should be
+  * displayed
+  * horizontally
+  * sorts out nicely
+
+**Important:** Look at the source file carefully to notice the double spaces on each
+element. It won't work unless its done like this exactly....
+
+
+.. _addcolor1:
+
+Adding color
+-----------------
+The next obvious visual concept to consider is adding color for text, and maybe horizontal lines
+like the html tag <hr>.
+
+A subdirectory exists in most of these releases, in **./source** named **addingcolor** with how
+to do that. 
+
+Note that formal documents generally do not, (and should not), **require** color to be usable.
+Making the 'system', work with color formally, involves stabilizing it as a system, because it
+involves add in pieces.  So if there isn't quite a commitment to doing that, its better to avoid
+it almost entirely for the moment; Rather then make construction of a little IDE more complex 
+for what is not essential. 
+
+The subdirectory is there for a reason... to enable the possibility with (hopefully),
+ease. So hack away if you like, but don't drag in a requirement for a frill. 
+
+    I would rather see a B & W image (instead of one with a little color), 
+    then an error on the TTY about a missing file I don't quite understand. 
+    Or worse, **struggle over a missing file which I can't find**, during a last minute time crunch
+    to do a thing!
+
+
+.. _aboutwho1:
+
+Authorship and versioning
+-----------------------------
+I had nearly instance success with activating some functionality to neatly add named persons
+for 'who did this thing?' controls at the per .rst level. It involves a switch in the conf.py file;
+specifically that is variable: **show_authors** and setting it to True enables this neat thing. Of
+course, a fussy label line needs inclusion in the .rst too. I wanted it recorded here as an enabling
+thing to be known, that it's doable, its easy, and just works.
+
+But it drags in a vast array of subsidiary issues; it's premature to rely on it, so its counterproductive
+to do without scoping a decision about who does what where, Id's etc and that is a lot to tangle up
+a first instance of a system. Look up the variable in a google search with **Sphinx** and try it if you like.
+
+
+.. _concu1:
+
+Conclusion
+----------
+The real official manual for Python is around 500 pages as is kind of comp sci ultra dense, not easy to apply. 
+Also, it meticulously integrates hundreds of version control changes for basically obsolete versions.
+
+This file is intended to get you into the ballpark for fancy output without all of that. But its there, for 
+you, when you need it.
+
+
+.. _verhelp1:
+
+=====================================
+Versioning - For this file alone
+=====================================
+.. csv-table:: **Version and release datablock**
+   :header: "# Ver", "Timestamp", "Venue", "Purpose", "Editor"
+   :widths: 1,1,1,1,1
+
+   "0.9.1", "23 Nov 2020 12:10 Z", "agentdbk on google cloud", "Teleconf chats", "Dan K"
+   "0.9.61", "27 Nov 2020 12:05 E", "agentdbk on google cloud", "Rollout support Ram S", "Dan K"
+   "0.9.62", "30 Nov 2020 11:08 E", "Dan K Toronto", "Rollout support Ram S", "Dan K"
+
+
+* This table **above** is for **Releases only**, if you have other versioning 
+  concepts, use comments 'down here' inside the file. 
+
+  .. NATO Time zone code reminder: E is Eastern standard UTC + 05
+  ..                               Z is UTC therefore UTC + 00 
+
+  .. 27 Nov 2020 15:29 Z Dan K
+     Lots of work, pretty nicely built now. Move to PIONEER then to the cloud
+     0.9.60 here
+
+  .. 27 Nov 2020 12:05 E
+     Compiled on PIONEER mostly made on NewtonHnf. NewtonHnf in Ubuntu64
+     and PIONEER is Windows. Each is the name of the HD 
+     Just Using_sphing ( this file id ) 0.9.61
+
+  .. 30 Nov 2020 11:00 E 
+     Trying to get this to Ram and the crew for today its a hand off maybe
+     0.9.62
+
+
+**Document end**
+
+

@@ -1,0 +1,50 @@
+.. _index03:
+
+Computational Biology Research Group (CompBio)
+==============================================
+State University of New York, Buffalo
+
+Research: Modelling life
+------------------------
+
+.. toctree::
+   :hidden
+
+  SARS-CoV-2_and_COVID-19_related_work.rst
+  The_Big_Picture.rst
+  Research.rst>
+  Philosophy.rst
+  Full_publication_list.rst
+  Vanity_in_the_media.rst
+
+
+
+Environment
+###########
+Computing - 2.44 x 10^13 IPC on 3282 GHz, 5256 GB RAM, 238 TB HD.
+
+Group
+#####
+| Ram Samudrala, PI/biohacker
+| Anthony Matsuura
+| Chris Contreras
+| Dan Kolis
+| Gaurav Chopra
+| James Schuler
+| Janez Konc
+| Jason North
+| Jeremy Horst
+| Kaushik Hatti
+| Liana Bruggemann
+| Manish Manish
+| Matthew Hudson
+| Ronak Sharma
+| Terminator, Cyberdyne Systems Series 800 Model 101 Version 2.4
+| William Mangione
+| Zack Falls
+
+Other
+#####
+Group contact and alumni information
+General contact, maps, and directions
+

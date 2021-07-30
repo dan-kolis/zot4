@@ -1,0 +1,121 @@
+.. _lblprotinfo:
+
+====================
+ProtInfo
+====================
+
+.. Useful to build more
+..   * - **PN**
+..     - Desc
+..   * -
+..     - <url>
+..   * -
+..     -
+..   * - **PN**
+..     - Desc
+..   * -
+..     - <url>
+..   * -
+..     -
+..   * - **PN**
+..     - Desc
+..   * -
+..     - <url>
+..   * -
+..     -
+
+The **Protinfo web server** collection consists of a series of discrete modules that model, and provide information about, protein folding, structure, function, interaction, evolution, and design by applying computational methodologies developed by our group. It serves as a complement to our Bioverse framework, where these modules are wholistically integrated, and other resources available as a result of our computational biology activities (see credits). As a result of our move in 2014 (a while back, we realise), there were many disruptions to the original servers that worked quite well for almost 15 years. Please bear any downtime and broken links.
+
+
+Interaction modelling
+~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: Protein docking
+   :widths: 20 75
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - **FDWD**
+     - Fragment-based docking with dynamics
+   * -
+     - <http://protinfo.compbio.buffalo.edu/fdwd/>
+
+
+Function Modelling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: Protein structure function and interaction
+   :widths: 20 75
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - **MFS**
+     - Protein meta-functional signature indicating functional importance of each residue
+   * -
+     - <http://protinfo.compbio.buffalo.edu/mfs/>
+   * -
+     -
+   * - **SOAK**
+     - Protein ion binding sites, types, affinities, and specificities from structure
+   * -
+     - <http://protinfo.compbio.buffalo.edu/soak/>
+   * -
+     -
+   * - **PIRSpred**
+     - Protein inhibitor resistance/susceptibility modelling
+   * -
+     - <http://protinfo.compbio.buffalo.edu/pirspred/>
+   * -
+     -
+   * - **FSSA**
+     - Protein functional signatures from structural alignments
+   * -
+     - <http://protinfo.compbio.buffalo.edu/fssa/>
+   * -
+     -
+
+
+Structure modelling
+~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: Structure modelling
+   :widths: 20 75
+   :header-rows: 1
+
+   * - Name
+     - Description
+   * - **ABCM**
+     - Protein tertiary structure using de novo and template modelling methods
+   * -
+     - <http://protinfo.compbio.buffalo.edu/abcm/>
+   * -
+     -
+   * - **PPC**
+     - Protein complex structure structure modelling using the interolog method
+   * -
+     - <http://protinfo.compbio.buffalo.edu/ppc/>
+   * -
+     -
+   * - **Score**
+     - Scores / pseudo-energies of protein conformations
+   * -
+     - <http://protinfo.compbio.buffalo.edu/score/>
+   * -
+     -
+   * - **NMR**
+     - protein tertiary structure using NMR chemical shift and NOESY data coupled with de novo simulation
+   * -
+     - <http://protinfo.compbio.buffalo.edu/nmr/>
+   * -
+     -
+   * - **PsiCSI**
+     - Protein secondary structure using NMR chemical shift data and neural networks
+   * -
+     - <http://protinfo.compbio.buffalo.edu/psicsi/>
+   * -
+     -
+
+
+
+
+
+

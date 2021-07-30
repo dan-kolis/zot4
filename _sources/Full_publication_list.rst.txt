@@ -1,0 +1,21 @@
+====================================================
+Full publication list
+====================================================
+
+.. raw:: html
+
+  <h2>Ram Samudrala's complete publication list</h2>
+
+
+146 publications total that consist of 134 scientific research related
+publications (including book chapters), 8 more general publications,  
+and 4 patent publications (I am against IP, but there's an explanation for this 
+seeming inconsistency here). See our ongoing research for a list organised by 
+topic. In summary, the H-index derived using Google Scholar is 37, from 5,203 
+cumulative citations. 83 out of 103 total publications have average and cumulative 
+impact factors of 5.76 and 478.46, with 26 (31%) better than average (representing 
+the top 4% of all journals).
+
+.. raw:: html
+   :file: refs_full_publications_list.text
+

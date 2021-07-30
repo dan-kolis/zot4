@@ -1,0 +1,59 @@
+=======================
+Philosophy
+=======================
+
+.. raw:: html
+
+  <h2>Group philosophies</h2>
+
+
+These philosophies and more are expounded on the CompBio wiki.
+
+I consider all of us as students of science. Every student in our group has a great 
+deal of freedom to pursue projects of interest to them and are not asked to do things 
+they don't want to do (except in pursuit of the larger goal of doing science, 
+i.e., rigourous controls are necessary to do good science, for example). 
+Unlike most other professions, the goal in our academic programme is to foster independent
+problem solving abilities. I'm also a strongly antiauthoritarian and the beauty of 
+science is to never believe in yourself or your ideas too much and always be highly self
+critical and questioning. As such, our group is run as a structured 
+anarchy ("Structured chaos", "complexity", or "edge of chaos" are all terms that 
+describe some of the science we do, much like life itself, and we also study how 
+models like these are among the most efficient and effective). 
+I however expect, as a condition of working together, that students 
+recognise that "with great freedom comes great responsibility" (made famous by 
+who?). One of those responsibilities is to leave the group significantly more 
+learnt (learned) and wiser, surpassing everyone's expectations, including their own 
+as well those of their mentor(s). The fact that students in our group have done so 
+is one of the reasons for their success.
+
+As a mentor, I believe in fostering an environment where each student's dreams and 
+potential can be fulfilled to the maximum extent possible. While I am passionate about 
+doing great science I also put the interests of the people who work with me above my own. 
+I value the intellectual and personal relationships I have with my students extremely 
+highly and I consider myself highly fortunate to be part of a group that not only 
+does great science, but makes it a pleasure to do so.
+
+More generally, I see the reason to do great science as not only personal but also 
+as an existential responsibility. I believe that "science is the greatest achievement 
+so far of the human race and its long term best hope for it's survival and 
+enlightenment." As organisms on this planet who consume more than they produce, 
+I see this as a way to restore the equilibrium.
+
+On a more personal level, a close knit group is almost like a family. 
+Not everyone has to agree. Disagreements are encouraged, but we need to end up working 
+together in the end to achieve our common goals. If you felt a sense of excitement 
+and passion when you first read this and continue to feel it, then keep at it! 
+The rest will follow. If you think you that you could use a reboot, then by all 
+means use all means at your disposal in the group to reboot.
+
+Finally, even though I use the word "science", I don't see it as being distinct 
+from philosophy or art or other categorisations of fields of learning. 
+Constantly attempting to falsify one's discoveries is science. Our niche is that 
+we do computational science, i.e., computational experiments that are well designed and 
+rigourously controlled in a computational laboratory. (For us, a set of one or 
+more computers is a system that we call a laboratory; our group therefore is referred 
+to as just that, a "group", not a "lab" or a "laboratory".)
+
+
+

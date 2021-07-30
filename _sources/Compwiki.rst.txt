@@ -1,0 +1,11 @@
+.. _lblcompwiki:
+
+====================
+CompWiki
+====================
+
+**Go to CompWiki**
+
+<http://wiki.compbio.buffalo.edu/CompBio>
+
+

@@ -1,0 +1,14 @@
+=============================
+Vanity in the media
+=============================
+
+.. raw:: html
+
+  <h2>Press / media</h2>
+
+Press/media and video section of the Nutritious Rice for the World project.
+
+.. raw:: html
+   :file: refs_press.text
+
+   

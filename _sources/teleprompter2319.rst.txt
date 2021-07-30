@@ -1,0 +1,97 @@
+===================
+Dan K Note for a video clip 29 Nov 2020 14:30 E
+===================
+
+Hi Matt, Ram, Zack, Nov end 0f 2020 subject HTML upgrade for CompBio
+using Sphinx doc program. Three things: ( no order )
+
+* translate site twice. 
+* worked example 
+* install how done, snags and fixes
+
+---------------------------
+First - translation of orig site
+---------------------------
+
+1) Conversion of plan text site to a Sphinx one, I have no idea how complete this is. I note in Teleconf there were some observations major line items were missing.
+
+1.1) Is this accurate ?
+
+1.2) Where are they ?
+
+1.3) I tried twice, once considerably distrupting Rams structure. the second time I did the exact opposite
+and stuck to the original greatly.
+
+However having a persistent index changes the logic of the organization of the content quite a lot. Rams
+original approach had considerable improvising to avoid a full blown navigation system.
+
+This still has advantages is that it feels like "Some guy who loves this work made this line by line".
+Of course, lexicons of papers and awards and so on re-ennvorce that too.
+
+But it makes an extra step to deviate from the slap it all in and let the indexing stack it up. The extra
+step I think is removing the injected index like pieces in the top index.
+
+Theres no hard and fixed dicotomoy between the two approaches. I suspect the near temr is to smooth them together a little, but retain the text absolutely as is. 
+
+
+---------------------------
+Second - Worked example
+---------------------------
+
+Secondly, I made a very carefully tested single file to make a single HTML with maybe 50 different features.
+
+When one required an edit to the associated python, I made that part of the file; explaining it.
+
+Since this .py is part of the deliverable, short tem its a non-issue, but that whole point of doing this
+right seems all about enabling indefinite application of it.
+
+I dont know why the documentation for Sphinx which looks so fabulous and some of which is so complete is
+hard to use. Its not an efficient use of our time to figure this out, its wierd.
+
+The fix for that is done; its one ultra careful worked example. I wanted this for other things I am doing, 'anyway' so now its available for the Buffalo side and myself.
+
+
+--------------------------------
+Third - Install notes for Sphinx
+--------------------------------
+
+I did the orginal work under Ubuntu 64 Bit, and at a last step made a parellel Sphinx IDE ish thing
+in windows. I kep ultra careful notes, the linux one was effortness, the Windows one was reasonably easy.
+
+Theres as is usually the case a 'holy shit, what is this ?' single question in the startup I figured how
+to do the right way, about the expecations of sets of .rst files going in verrsus builds. Easy as always,
+once you do it wrong and backup.
+
+Matt played with the searching, which made me wonder if he might install Sphinx, and I think Zacks points of
+contact with the outside wourld might benefit from easy ways to glue together HTML and casually flip out
+seemingly custom sites. I am sure with careful work the existing files can always be woven into a absolutely
+perfect custom subset in shockingly little time.
+
+The subtext here is not so simple as more fancy typsetting in HTML, but having HTML impressions with multiple
+top level points, without much labor anf few instances of stupid looking things.
+
+For instance, a student os associate can certaintluy guess out a one of submission to the web master in .rst
+and it will drop in beautially. If they run linux there is a line item tool, I tried it its pretty cool, makes a one of .rst to HTML locally, so a motovated worker can even complete it perfectly.
+
+
+--------------------------
+Closing thought
+--------------------------
+
+I don't wan to be a webmaster for 'some guys in a different country' indefinitely, but I will fro a while put
+lets say 5 hours a week on it. We all know saying '5 hours' usually is more like 10, huh...
+
+But RAM ! said lets fixup up the WWW, not me. So Id like to have somebody else run Sphinx and sort of hand it off, or maybe more like share the responsibility.
+
+I don't think its important, but its might also be a way for Cando to get hands on with cloud computing. WWW support is a low cost; ( can be free entirely but bearing a little cost might be worth it ).
+
+
+I will package up the files neatly for Teleconf Monday 30 Nov 2020 and neaten up the hosting and leave that running indefinitely.
+
+End of Document
+
+
+
+
+
+

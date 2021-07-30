@@ -1,0 +1,95 @@
+
+.. _compBioOp9p63:
+
+==================================================
+Computational Biology Research Group (CompBio)
+==================================================
+State University of New York, Buffalo
+
+Research: Modelling life
+------------------------
+
+.. toctree::
+   
+  SARS-CoV-2_and_COVID-19_related_work.rst
+  The_Big_Picture.rst
+  Research.rst>
+  Philosophy.rst
+  Full_publication_list.rst
+  Vanity_in_the_media.rst
+  Bioverse.rst
+  Cando.rst
+  Rice.rst
+  Decoys.rst
+  Compwiki.rst
+
+=================================
+Major projects
+=================================
+
+**********
+Bioverse
+**********
+- *Object-oriented framework* **for exploring the relationships among
+  the molecular, genomic, proteomic, systems, and organismal worlds.** 
+  :ref:`lblbioverse`
+
+
+****************
+CANDO
+****************
+- *In virtuale small molecule repurposing pipeline* 
+  **to revolutionize drug discovery.** 
+  :ref:`lblcando`
+
+   
+**********
+Rice
+**********
+- *Structure, function, interaction of rice proteins and proteomes* 
+  **to to devise new forms of nutritious rice for the world.**
+  :ref:`lblrice`
+
+
+***************
+Decoys 'R' Us
+***************
+- *Discriminate native like protein structures*
+  **to evaluate scoring functions.**
+  :ref:`lbldecoysrus`
+
+
+****************
+CompWiki
+****************
+- *Documentation and dialetic.*
+  **Discussion Blog.**
+  :ref:`lblcompwiki`
+
+
+Environment
+###########
+Computing - 2.44 x 10^13 IPC on 3282 GHz, 5256 GB RAM, 238 TB HD.
+
+Group
+#####
+| Ram Samudrala, PI/biohacker
+| Anthony Matsuura
+| Chris Contreras
+| Dan Kolis
+| Gaurav Chopra
+| James Schuler
+| Janez Konc
+| Jason North
+| Jeremy Horst
+| Kaushik Hatti
+| Liana Bruggemann
+| Manish Manish
+| Matthew Hudson
+| Ronak Sharma
+| Terminator, Cyberdyne Systems Series 800 Model 101 Version 2.4
+| William Mangione
+| Zack Falls
+
+
+

@@ -1,0 +1,45 @@
+.. _index06:
+
+Subjects
+========
+
+.. toctree::
+
+  About_me.rst
+  About_UB_group.rst
+  Quantum_DW.rst
+
+.. Things_of_interest_to_me.rst
+
+HTML Versioning
+===============
+
+As per::
+  12 Nov 2020 12:01 Z - First issuance to WWW
+
+.. This is possible a ignore comment line
+
+.. centered:: WWW changes will be documented in the above format
+
+.. Cold plasma notes:
+.. why; Whats this all about, introductory usually.
+.. thf; The Future; Covid-19 short term predictions not until 2025.
+.. acp; About cold plasma; History and background.
+.. ela; Elevators A; Dialog about elevators generally.
+.. els; Elevators slow; Slow down building usage.
+.. jpp; Just Prototype plans; Name and enumeration of prototypes, esp airflow affectors.
+.. whi; Whos in; Potential partners.
+.. its; Iteration cycle; How to move ideas ot outcomes.
+.. vao; Valuation outlook; does experimentation change valuation of founder companies.
+.. hmw; How much and when. Two big questions, never answered entirely is the correct touch.
+.. dah; Dan says hi; About me.
+.. whs; Why slow; Why did this develop so slowly.
+
+
+
+.. Named persons 10 Nov 2020
+.. Walter Schwabe and email is waterschwabe@gmail.com 
+.. Dan Kolis                   dankolis@gmail.com
+
+
+
