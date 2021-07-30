@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ls -ltr" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Sphinx - Worked examples &mdash; Tuttle and Associates - Beyond Warming 1.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Tuttle and Associates - Beyond Warming
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Using Sphinx - Worked examples</a><ul>
+<li><a class="reference internal" href="#about-sphinx">About Sphinx</a></li>
+<li><a class="reference internal" href="#enabling-features-and-comments-about-extensions">Enabling features and comments about extensions</a><ul>
+<li><a class="reference internal" href="#the-official-documentation-is-a-bit-weird">The Official documentation is a bit weird</a></li>
+<li><a class="reference internal" href="#copy-and-paste-is-your-friend">Copy and paste is your friend</a></li>
+<li><a class="reference internal" href="#important-terminology">Important terminology</a></li>
+<li><a class="reference internal" href="#more-terminology-essentials">More terminology essentials</a></li>
+<li><a class="reference internal" href="#heads-up-about-toctree">Heads up ! About toctree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#worked-examples-begin-here">Worked examples begin here</a><ul>
+<li><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#internal-to-project-jump-to-clickable-points">Internal to project jump to clickable points</a></li>
+<li><a class="reference internal" href="#a-note-box">A note box</a></li>
+<li><a class="reference internal" href="#a-warning-box">A warning box</a></li>
+<li><a class="reference internal" href="#admonitions">Admonitions</a></li>
+<li><a class="reference internal" href="#some-in-line-text-effects">Some in line text effects</a></li>
+<li><a class="reference internal" href="#a-code-block">A code block</a></li>
+<li><a class="reference internal" href="#adding-unicode-chars">Adding Unicode chars</a></li>
+<li><a class="reference internal" href="#embedded-text-tweaks">Embedded text tweaks</a></li>
+<li><a class="reference internal" href="#indented-paragraphs">Indented paragraphs</a></li>
+<li><a class="reference internal" href="#heading-special-marks-for-lines-around-the-text">Heading special marks for lines around the text</a></li>
+<li><a class="reference internal" href="#simplest-link-to-a-same-page-heading">Simplest link to a same page heading</a><ul>
+<li><a class="reference internal" href="#going-to-a-link-local-in-this-case-with-a-custom-description">Going to a link ( local in this case ) with a custom description</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links-to-an-external-url">Links to an external URL</a></li>
+<li><a class="reference internal" href="#centering">Centering</a></li>
+<li><a class="reference internal" href="#more-fixed-text">More Fixed Text</a></li>
+<li><a class="reference internal" href="#ordered-pairs">Ordered pairs</a></li>
+<li><a class="reference internal" href="#csv-style-tables">CSV Style tables</a></li>
+<li><a class="reference internal" href="#images-jpg-png-presumably">Images - JPG PNG presumably</a><ul>
+<li><a class="reference internal" href="#more-full-featured-image-inclusion">More full featured image inclusion</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-code-block-specifically-tweaked-for-html">A code block specifically tweaked for HTML</a></li>
+<li><a class="reference internal" href="#offer-files-for-downloads">Offer files for downloads</a></li>
+<li><a class="reference internal" href="#iframe-using-raw-html">IFRAME using raw HTML</a></li>
+<li><a class="reference internal" href="#inline-roles">Inline Roles</a></li>
+<li><a class="reference internal" href="#footnotes">Footnotes</a><ul>
+<li><a class="reference internal" href="#elsewhere">Elsewhere</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#math">Math</a></li>
+<li><a class="reference internal" href="#abbreviations">Abbreviations</a></li>
+<li><a class="reference internal" href="#horizontal-lists">Horizontal lists</a></li>
+<li><a class="reference internal" href="#adding-color">Adding color</a></li>
+<li><a class="reference internal" href="#authorship-and-versioning">Authorship and versioning</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#versioning-for-this-file-alone">Versioning - For this file alone</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tuttle and Associates - Beyond Warming</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Using Sphinx - Worked examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Using_sphinx_worked_examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-sphinx-worked-examples">
+<span id="id1"></span><h1>Using Sphinx - Worked examples<a class="headerlink" href="#using-sphinx-worked-examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-sphinx">
+<span id="aboutsphinx1"></span><h2>About Sphinx<a class="headerlink" href="#about-sphinx" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Sphinx is a <strong>documentation generator</strong>;
+in which human readable text can be compiled to create various published kinds of output
+sets. Its is written in Python, and any operating system that can run Python 3.X correctly
+can convert prepared files to ready to publish sets created with one click.
+A specific functionality of interest to everyone is making HTML for WWW browser communication.
+LaTeX is a non-trivial second output  possibility, usually rendered somewhat indirectly to
+make a PDF file for each publishing project.</p>
+<p>Sphinx converts <strong>reStructuredText</strong> into the outputs; (visualize HTML for the moment),
+These input files by convention have an 'extension' of .rst. There is a one to one
+correspondence between .rst inputs and .HTML files; but support involves hundreds of files
+to support a built in search engine and a navigation system. The output is ready for a single
+point of contact with a server program like Apache. This usual top level interface point
+begins as file: <strong>index.html</strong>, which is exactly the usual expectation for distribution on
+internet.</p>
+<p>Images are supported perfectly well, and embedded WWW experiences like video can be configured
+with a little focused effort, using IFRAMES, or RAW, two ways to extend Sphinx without
+'real' Python programming and the effort to integrate it.</p>
+<p><strong>My opinion regarding extensions of functionality:</strong> is that there is no compelling reason
+to turn every publishing project into a parallel software support project. A simple setting
+of some <strong>single global variable</strong> to TRUE pr FALSE and reading and <strong>applying the directions
+carefully</strong> can do 99% of anything rational, with absolutely no programming whatsoever.</p>
+</div></blockquote>
+</div>
+<div class="section" id="enabling-features-and-comments-about-extensions">
+<span id="morefeatures"></span><h2>Enabling features and comments about extensions<a class="headerlink" href="#enabling-features-and-comments-about-extensions" title="Permalink to this headline">¶</a></h2>
+<p>Using the markdown language of <strong>reStructuredText</strong> files, Sphinx is extensible by hooking
+new features in via Python libraries. <strong>Extensions</strong>, for example – improve the functionality
+for exports for documentation of computer programs from base source code, and the rendering
+of even the most obscure mathematical notations, (to name two scoped fields of enhancement).</p>
+<p>A single file tucked in with the .rst set file: <strong>conf.py</strong> is small but very important.
+Huge pieces of functionality are turned <strong>off</strong> by default, but can be enabled by changing
+a single variable's values to True from either non-existence, or a default setting of False.</p>
+<p>This file is <em>not</em> read as a file by the Sphinx program, it's suddenly part of the executable
+itself. Some options involve, for instance, setting dictionary elements to global constants.
+However, simply setting a predefined variable name to True or False, is by far the most common
+control point to enable a line item of functionality.</p>
+<p>Many Book-specific concepts like sections, chapters and footnotes are supported without
+requiring extensions; and even glossaries and other lexicons of various kinds are enabled
+by setting Sphinx to make JSON files to enable these possibilities.</p>
+<p>Versioning and display of authorship for each .rst file is an interesting switchable
+functionality. A fine; <strong>'ready to go' without extension</strong>, capability.
+And even more control is available with some Python add-in's along these lines.</p>
+<p>Non existence or incorrect placement of this file is a serious problem. If it is not found,
+the package will not produce results. The error message on TTY is:</p>
+<p class="centered">
+<strong><strong>Application error: config directory doesn't contain a conf.py file</strong></strong></p><div class="section" id="the-official-documentation-is-a-bit-weird">
+<span id="docw1"></span><h3>The Official documentation is a bit weird<a class="headerlink" href="#the-official-documentation-is-a-bit-weird" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>'Official'</strong> documentation seems oddly hard to actually use.</p>
+<p>This HUMAN READABLE worked example is a single file, showing only things that
+<strong>WORK 100% in each how-to chunk of knowledge</strong>; Each with a (hopefully), clear explanation.</p>
+<p>The file: <strong>Using_sphing_worked_examples</strong> is the .rst and presumably the same named HTML and/or
+other output rendering.
+You will want to look at <strong>the code itself</strong>, along with what it produces, here.</p>
+<p class="centered">
+<strong><strong>Don't look at the output alone. Look at what made it.</strong></strong></p><p>This specific reference is the best I found for usability, Many other's are somewhat misleading:
+&lt;<a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html</a>&gt;</p>
+</div>
+<div class="section" id="copy-and-paste-is-your-friend">
+<span id="cfriend11"></span><h3>Copy and paste is your friend<a class="headerlink" href="#copy-and-paste-is-your-friend" title="Permalink to this headline">¶</a></h3>
+<p>The mix of different syntaxes and importance of whitespace makes it frustrating to try for
+each visual effect the first time you attempt it.
+Cut and paste of the <strong>actual text that created this worked example</strong>, is much more productive
+then a protracted cycle of Google searches.</p>
+</div>
+<div class="section" id="important-terminology">
+<span id="terminology1"></span><h3>Important terminology<a class="headerlink" href="#important-terminology" title="Permalink to this headline">¶</a></h3>
+<p>Instructions will tell your about <strong>Docutils</strong> which is a markdown notation that existed long before
+Sphinx. This is basically about a fat library of Python that is called for <strong>some,
+but not all</strong> markdown / markup.</p>
+</div>
+<div class="section" id="more-terminology-essentials">
+<span id="termessent11"></span><h3>More terminology essentials<a class="headerlink" href="#more-terminology-essentials" title="Permalink to this headline">¶</a></h3>
+<p><strong>reStructuredText</strong> is the slight upgrade to <strong>Docutils</strong> markup and it's abbreviated <strong>reST</strong>.
+Don't be too worried about it, Remember if something is ignored, the file: <strong>conf.py</strong> often
+turns on and off the function that does not do what you expect.</p>
+</div>
+<div class="section" id="heads-up-about-toctree">
+<span id="headsup1"></span><h3>Heads up ! About toctree<a class="headerlink" href="#heads-up-about-toctree" title="Permalink to this headline">¶</a></h3>
+<p>If you're maintaining an existing publishing project, perhaps you do not need to understand the
+tricky <strong>toctree</strong> keyword completely.
+The scope of this keyword is how propagation of headings and creation of the table of contents
+is controlled.</p>
+<p><strong>Even if your work is extensive</strong>, copying and editing what is begun; Is best. Any change to this
+means almost certainly a visit to <strong>every human readable file in the project</strong> and is an undefined
+commitment in time.</p>
+<p>Generally, the toctree 'just do it' magic is kicked in at the start of conversion alone; In the
+file: <strong>index.rst</strong>.
+Scattering <em>toctree</em> in other files will make the index content crazy, not better.
+<strong>Any of the many switches</strong> around it change the project quite a lot.
+This is serious stuff for getting, or maintaining desired results.</p>
+<p>But if you start a project 'from scratch', you will want to experiment with the <strong>toctree</strong> portion before
+committing to a procedure for designing your workflow.</p>
+<p>I suppose a bit of bad news is: <strong>toctree</strong> is beyond the scope of this document entirely.</p>
+</div>
+</div>
+</div>
+<div class="section" id="worked-examples-begin-here">
+<span id="workede1"></span><h1>Worked examples begin here<a class="headerlink" href="#worked-examples-begin-here" title="Permalink to this headline">¶</a></h1>
+<p>The following material is presented roughly in the order of importance, <strong>starting with flat text</strong>
+and <strong>concluding with images, lists and footnotes</strong>. <strong>What you need to know most</strong>, is first.</p>
+<p>There is no other specific order whatsoever. The goal is to supply you with one file making one
+HTML point of contact. The two together should enable your contribution to the documentation creation
+and management process.</p>
+<p>Sometimes, the actual text to do a thing is shown, other times it is hinted that a look
+at the source file: <strong>Using_sphinx_worked_examples.rst</strong>, is best. This is intentional; Each
+function is exposed one way or the other. The choice is based on how it's (hopefully), easiest
+for you to get results with the least iterative frustration.</p>
+<div class="section" id="paragraphs">
+<span id="para10"></span><h2>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h2>
+<p>Most of your file content will be flat text broken up with empty lines, marking the gap
+between paragraphs. Sometimes you will want a heading as per the underlined text.</p>
+<p>Sphinx literature says widths should be less then 98 chars wide, but logically the width is more
+often half that and left organized for orderly editing of the ideas. Narrower is better,
+so that is an abs max. UTF-8 encoding for the many <strong>.rst</strong> files, is best.</p>
+<p>Double blank lines are an useful organizational concept. Like HTML and LaTeX, extra lines disappear in
+HTML output entirely. Extra white space for flat text is also correctly removed in HTML output.</p>
+<p>You can learn this organically by trying it 'as you go' or by adding file(s) and doing a conversion,
+then look for your test file, ignoring the rest of the publishing act for the moment.</p>
+<p><strong>Simple:</strong> Same filename, but different extension, ( <strong>.rst to .html</strong> ).
+Any file not included in the recursive gets from <strong>index.html</strong> does not earn a place in the index, but
+a little poking and you will find the output it created. This is an easy way to get the look right
+without thinking about the project in its entirety. Just hack at one file making one piece of HTML
+until your ready to make that appear, typically by adding it to file: <strong>index.rst</strong> of course.</p>
+</div>
+<div class="section" id="comments">
+<span id="comments1"></span><h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>Comments begin at the left margin; then two spaces, two periods, a space and any text; like this:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">.. This is a comment. It does not show up in the converted output.</div>
+</div>
+</div></blockquote>
+<p>Various reuses of the markdown benefit from TWO spaces, not just ONE, though most things that need whitespace
+seem to work with one. Worked examples in 'official' documents use two spaces for fancy whitespace.
+That is, whitespace usee to trigger commands and formatting. Since embedded paragraphs need exact matching,
+spaces are a bit deal to Sphinx.</p>
+<p>Also, <strong>no tabs as syntax elements</strong> please.
+The <strong>reST</strong> spec says:</p>
+<blockquote>
+<div><p>&quot; <strong>Spaces are recommended for indentation, but tabs may also be used.
+Tabs will be converted to spaces. Tab stops are at every 8th column</strong> &quot;</p>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#whitespace">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#whitespace</a></p>
+</div></blockquote>
+<p>Formal documents seem to chat up 3 spaces, but most of the stuff seems to use two. This
+applies to commands and calls to the styling, for regular text of course; A space is a space !</p>
+<p>Embedded program examples with tabs are a special case. Maybe tabs are ok in those, try it and decide
+if the wide space equiv looks strange. This issue would certainly complicate reuse in LaTeX too.</p>
+<blockquote>
+<div></div></blockquote>
+</div>
+<div class="section" id="internal-to-project-jump-to-clickable-points">
+<span id="toproj1"></span><h2>Internal to project jump to clickable points<a class="headerlink" href="#internal-to-project-jump-to-clickable-points" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to jump to any heading in your published work with a <strong>ref</strong> command, and all the details
+like going back with direction arrows, and scrolling are handled perfectly. This example is about
+<strong>Points defined by headings in the project, in any .rst file</strong>. Jumps to http are similar, but not
+identical.</p>
+<p>Heading text as jump to <strong>labels</strong> are <strong>sort of</strong> usable as targets; But if there duplicated,
+then the conversion process doesn't know <strong>which one</strong> is the intended target.
+Marking a <strong>jump to point</strong> with a unique name makes it a <strong>label</strong>. This is usually worth the time it
+takes. There is no liability having an unused label. If you are sure the file needs no or very little
+hopping around, you can decide to just ignore adding labels to headings, but keep it in mind for work
+likely to be maintained 'forever', or for complex works where jumping around is usually indicated
+sooner or later.</p>
+<p><strong>I find proofreading is simplified</strong> to having a known 'look at me for editing' label point open in
+both a browser and editor anyway. The command to use the click hop point is exactly the same whether
+it's an added in label or pulled from the flat text of the heading itself.</p>
+<dl>
+<dt>To create a label in the text before any heading, use this syntax:</dt><dd><div class="line-block">
+<div class="line">.. _elephant13:</div>
+</div>
+</dd>
+</dl>
+<p>Oddly perhaps, you need an empty line before and after the label line, or it will be ignored.</p>
+<dl>
+<dt>Then, any number of the <strong>ref</strong> keyword(s) can be placed anywhere in the project, like so`:</dt><dd><div class="line-block">
+<div class="line">:ref:`elephant13`</div>
+</div>
+</dd>
+</dl>
+<p>The conversion shows you have a malformed entry by <strong>coloring the entry funny</strong>, and not supplying the
+target text.
+..
+To see the <strong>label ref pair</strong> really work, just search for <strong>para10</strong> and see this jump point in the source.
+Here it is working:</p>
+<p><a class="reference internal" href="#para10"><span class="std std-ref">Paragraphs</span></a></p>
+</div>
+<div class="section" id="a-note-box">
+<span id="anote1"></span><h2>A note box<a class="headerlink" href="#a-note-box" title="Permalink to this headline">¶</a></h2>
+<p>Some dressy content formatting is very easy to generate, like this box of information with a title.
+Different colors for titles look great, all carefully ready to go:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.
+It is some multiline of flat text starting with 2 spaces in the source after the command name.
+If it's long, the program figures out how to break it,
+center it, whatever it takes to make it look 'just so'.</p>
+</div>
+</div>
+<div class="section" id="a-warning-box">
+<span id="warning1"></span><h2>A warning box<a class="headerlink" href="#a-warning-box" title="Permalink to this headline">¶</a></h2>
+<p>Warning, as in: 'do not do this', stuff:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a warning.
+There are many so called admonitions like this. Here is a list of them all:</p>
+</div>
+</div>
+<div class="section" id="admonitions">
+<span id="admon1"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
+<p>Just substitute this keywork for the kind of box you want, and you will get a colored entry
+like the above with a different title</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>Dingo</p></li>
+<li><p>short items</p></li>
+<li><p>that should be</p></li>
+<li><p>displayed</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>horizontally</p></li>
+<li><p>sorts out nicely</p></li>
+<li><p>attention</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>caution</p></li>
+<li><p>danger</p></li>
+<li><p>error</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>hint</p></li>
+<li><p>important</p></li>
+<li><p>note</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>tip</p></li>
+<li><p>warning</p></li>
+<li><p>title</p></li>
+</ul>
+</td></tr></table>
+<p>That horizontal self spacing construct is called a <strong>hlist</strong>. It is explained a little further down in
+this worked example file. Note its often just right to dress up a list you might be tempted to render
+as a table. Trying to <em>get away with</em> the simplest syntax that does the job, is efficient.</p>
+</div>
+<div class="section" id="some-in-line-text-effects">
+<span id="someline1"></span><h2>Some in line text effects<a class="headerlink" href="#some-in-line-text-effects" title="Permalink to this headline">¶</a></h2>
+<p>In line text changes entries just a little. Two are STRONG and EMPHASIS, like this example.</p>
+<blockquote>
+<div><p>Hey you ! said the <strong>big dogs friend</strong> with the <em>fancy eyebrows</em>.</p>
+</div></blockquote>
+<p>Please look at the source code. Note these require <strong>backtick</strong> not <a href="#id2"><span class="problematic" id="id3">**</span></a>single quote&quot;&quot;.</p>
+</div>
+<div class="section" id="a-code-block">
+<span id="ablock1"></span><h2>A code block<a class="headerlink" href="#a-code-block" title="Permalink to this headline">¶</a></h2>
+<p>Quoted hunk of code have a specific way for presentation. Note there is a <em>style hint</em> naming
+the language, which handles some stuff like comments and whitespace. This is listed as 'c'
+for this example.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>This is a so called Code block. It&#39;s like note a lot, but it adds a kind of language hint.
+Maybe indenting helps.
+  int z = 5;
+
+  z = z + 5;
+  string yup = &quot;test&quot;;
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-unicode-chars">
+<span id="addingunicode1"></span><h2>Adding Unicode chars<a class="headerlink" href="#adding-unicode-chars" title="Permalink to this headline">¶</a></h2>
+<p>Adding copyright symbol and the Euro is explained reasonably well here:
+&lt;<a class="reference external" href="https://docs.anaconda.com/restructuredtext/detailed/">https://docs.anaconda.com/restructuredtext/detailed/</a>&gt;</p>
+<p>Look for &quot;unicode&quot;, it's somewhat buried in some other concept generally.</p>
+</div>
+<div class="section" id="embedded-text-tweaks">
+<span id="embedded1"></span><h2>Embedded text tweaks<a class="headerlink" href="#embedded-text-tweaks" title="Permalink to this headline">¶</a></h2>
+<p>Text can be ordained with touch up like this:
+Asterisks one and two do this: <em>I am one</em> and <strong>I am Two</strong>
+The first one is italics, the second is bold.</p>
+</div>
+<div class="section" id="indented-paragraphs">
+<span id="indp1"></span><h2>Indented paragraphs<a class="headerlink" href="#indented-paragraphs" title="Permalink to this headline">¶</a></h2>
+<p>This is just left margined two lines, this is one.
+This is two.</p>
+<dl>
+<dt>But this is multiple indents</dt><dd><p>Two for me.
+More two for me.</p>
+<blockquote>
+<div><p>Four for me now.</p>
+<blockquote>
+<div><p>&quot; Quotes might help sometimes, or just more drums &quot;
+- Buddy Guy</p>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+<div class="section" id="heading-special-marks-for-lines-around-the-text">
+<span id="pagetitle1"></span><h2>Heading special marks for lines around the text<a class="headerlink" href="#heading-special-marks-for-lines-around-the-text" title="Permalink to this headline">¶</a></h2>
+<p>The hierarchy for what is called h1 to h6 headings in HTML involves using certain characters,
+such that a size is associated with a character.
+<strong>A bit of a scrap paper note</strong> might help you as you work, or just commit them to memory.
+Using them inconsistently will make funny looking headings, which will require correction
+or just look funny forever. The largest to smallest marking characters are:</p>
+<blockquote>
+<div><p>====== Largest, most important</p>
+<p>----- Next most important heading category</p>
+<p>+++++ Next down</p>
+<p>**** Down again</p>
+<p>~~~~~ Smallest</p>
+</div></blockquote>
+<p>The underline can be <strong>wider</strong> then the text it decorates, but <strong>not</strong> narrower.
+When used both above and below, its count must 'match exactly' or will result in errors,
+and weird rendering. I usually pick three carefully for a project and use them consistently,
+as opposed to overthinking 1 of 6 for every little entry.</p>
+</div>
+<div class="section" id="simplest-link-to-a-same-page-heading">
+<span id="samep1"></span><h2>Simplest link to a same page heading<a class="headerlink" href="#simplest-link-to-a-same-page-heading" title="Permalink to this headline">¶</a></h2>
+<p>All the material about labels and <strong>ref</strong> might leave you unsure about the simplest case.
+Here it is, a clickable reference which pulls the title for a same file heading.</p>
+<p><a class="reference internal" href="#paragraphs"><span class="std std-ref">Paragraphs</span></a></p>
+<p>But to make links try harder to find where to go, this change (below), is worth doing.
+If you inherit a working project, its probably already done, but if not, here is how to do it;
+A one line change:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>extensions = [ &#39;sphinx.ext.autosectionlabel&#39; ]
+</pre></div>
+</div>
+<p>Some note(s) in the documentation say: &quot;Your version may do this differently&quot;.
+But probably that line can't hurt. AGAIN !  A common reason to have any example not work is the
+absence of a fact or assignment in file: <strong>conf.py</strong> which must be in the ./source directory
+with your text to be converted.</p>
+<div class="section" id="going-to-a-link-local-in-this-case-with-a-custom-description">
+<span id="golink1"></span><h3>Going to a link ( local in this case ) with a custom description<a class="headerlink" href="#going-to-a-link-local-in-this-case-with-a-custom-description" title="Permalink to this headline">¶</a></h3>
+<p>It's easy to have a a click to point with custom text instead of pulling the heading text itself.
+Like this one, going to <strong>Paragraph</strong> like the previous example, but this has its own description.</p>
+<p><a class="reference internal" href="#paragraphs"><span class="std std-ref">About paragraphs for small skunks in the woods</span></a></p>
+<p><strong>Important:</strong> Most of these commands require <strong>backtick</strong> not a single quote.
+That is a backtick for both leading and trailing mark. Also, adding or deleting spaces
+between the lexical elements frequently destroys the functionality of the instruction
+totally.</p>
+</div>
+</div>
+<div class="section" id="links-to-an-external-url">
+<span id="extlink1"></span><h2>Links to an external URL<a class="headerlink" href="#links-to-an-external-url" title="Permalink to this headline">¶</a></h2>
+<p>Because hypertext is so important, its not surprising a package like this has all
+sorts of variations to make a URL clickable. You should look at this as source code level, probably.
+First a URL without a local description:</p>
+<p>&lt;<a class="reference external" href="http://www.hatbox.com/">http://www.hatbox.com/</a>&gt;</p>
+<p>And next, with a re-written description:</p>
+<p><a class="reference external" href="http://cnn.com">A funny news Network</a></p>
+<p>Note the funny use of an underscore. Also a space is required right before the opening &lt; mark.</p>
+<p>Next, an inline with text URL &lt;<a class="reference external" href="http://www.thesprucepets.com/reasons-ferrets-make-good-pets-1236788">http://www.thesprucepets.com/reasons-ferrets-make-good-pets-1236788</a>&gt; HEY, we
+all know how much fun Ferrets can be around the house.</p>
+<p><em>Next</em>, a renamed inline hyperlink: <a class="reference external" href="http://stackoverflow.com/">Stack IS Overflowing</a> is a source of information,
+both excellent and terrible.</p>
+<p>Here is a source of how to information about less common URL access possibilities.
+Examples of this include: Facilities to have a cache, renaming of 'links' to make internal lexicons of
+URLs, and testing to detect dead links:</p>
+<p>&lt;<a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html">https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html</a>&gt;</p>
+<p><strong>Note:</strong> Even if the server is known to only support <strong>https</strong> I suggest you use <strong>http</strong>
+in the call(s). The multi-pass handshaking will upgrade the crypto better then any hand doodling.
+It will figure out 80 versus 443 and the right crypto. If you are accidentally leaving your session content
+un-encrypted, the fix is on the server side, no here at the client...</p>
+</div>
+<div class="section" id="centering">
+<span id="center1"></span><h2>Centering<a class="headerlink" href="#centering" title="Permalink to this headline">¶</a></h2>
+<p>Centering anything inherits a little of the mess from from HTML on the same subject.</p>
+<p class="centered">
+<strong>Whoopee Golberg has fun at work</strong></p><p>And a multi line variation:</p>
+<p class="centered">
+<strong>This is a multiple line thing, Its hard to decide if it is really centered correctly.
+Its important to notice and apply the spaces for indentation.</strong></p><p>A look at the source code, as source... is probably best.</p>
+</div>
+<div class="section" id="more-fixed-text">
+<span id="fixedtext1"></span><h2>More Fixed Text<a class="headerlink" href="#more-fixed-text" title="Permalink to this headline">¶</a></h2>
+<p>Another hint for fixed horizontal space uses the virgule symbol.
+line started with a virgule, like:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">A one, two, a one two three four</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Half a bee, philosophically,</div>
+<div class="line-block">
+<div class="line">must, <em>ipso facto</em>, half not be.</div>
+</div>
+<div class="line">But half the bee has got to be,</div>
+<div class="line-block">
+<div class="line"><em>vis a vis</em> its entity.  D'you see ?</div>
+</div>
+</div>
+</div></blockquote>
+<p>Notice even multiple CRLF are maintained, usually this is hard to achieve in HTML.</p>
+</div>
+<div class="section" id="ordered-pairs">
+<span id="orderedpairs1"></span><h2>Ordered pairs<a class="headerlink" href="#ordered-pairs" title="Permalink to this headline">¶</a></h2>
+<p>Ordered pairs can be represented with ease. Since so many computery things are this = that ideas,
+this is quite useful.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>2001-08-16</p>
+</dd>
+<dt class="field-even">Version</dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Me</p></li>
+<li><p>Myself</p></li>
+<li><p>I</p></li>
+</ul>
+</dd>
+<dt class="field-even">Indentation</dt>
+<dd class="field-even"><p>Since the field may be quite long, the second
+and subsequent lines of the field body do not have to line up
+with the first line</p>
+</dd>
+<dt class="field-odd">Parameter i</dt>
+<dd class="field-odd"><p>integer</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="csv-style-tables">
+<span id="csvtables1"></span><h2>CSV Style tables<a class="headerlink" href="#csv-style-tables" title="Permalink to this headline">¶</a></h2>
+<p>There are about three ways to make tables. this one is interesting,
+a sort of CSV like entry:</p>
+<table class="colwidths-given docutils align-default" id="id11">
+<caption><span class="caption-text">Frozen Delights!</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Treat</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albatross</p></td>
+<td><p>2.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crunchy Frog</p></td>
+<td><p>1.49</p></td>
+<td><p>If we took the bones out, it wouldn't be
+crunchy, now would it?</p></td>
+</tr>
+<tr class="row-even"><td><p>Gannet Ripple</p></td>
+<td><p>1.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+</tbody>
+</table>
+<p>These nice entries are at this URL: &lt;<a class="reference external" href="https://runawayhorse001.github.io/SphinxGithub/rtxt.html">https://runawayhorse001.github.io/SphinxGithub/rtxt.html</a>&gt;</p>
+</div>
+<div class="section" id="images-jpg-png-presumably">
+<span id="images1"></span><h2>Images - JPG PNG presumably<a class="headerlink" href="#images-jpg-png-presumably" title="Permalink to this headline">¶</a></h2>
+<p>Images can be supported with ease, they can be pulled from other directories, but let's start
+with one in <strong>./source</strong> The same spot as the .rst file doing the calling.</p>
+<img alt="_images/rags.jpg" src="_images/rags.jpg" />
+<p>Note: The extension can be omitted and the packaged tries to find and show the file.
+This also works, see the source code if you want to be sure of this, but here it is to encourage
+you to use the wild card form:
+| .. image:: rags.*</p>
+<p>Official documents say the .* find it yourself is preferred so the package
+can pick the best <strong>.ext</strong> for particular renderings. That is, <strong>.jpg .svg .png</strong> with the same filename
+is specifically supported.</p>
+<div class="section" id="more-full-featured-image-inclusion">
+<span id="images2"></span><h3>More full featured image inclusion<a class="headerlink" href="#more-full-featured-image-inclusion" title="Permalink to this headline">¶</a></h3>
+<p>Here is a more maximal example. Figures can renumber themselves and be referred to with symbolic names too.
+This example is slightly less fell blown then that, however.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/plates.jpg"><img alt="Dishware" src="_images/plates.jpg" style="width: 118.0px; height: 106.0px;" /></a>
+<p class="caption"><span class="caption-text"><strong>This is a picture of some dish stuff</strong></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>This is quite simply achieved, using:</dt><dd><div class="line-block">
+<div class="line">.. figure:: happypictures/plates.*</div>
+<div class="line-block">
+<div class="line">:scale: 50 %</div>
+<div class="line">:alt: Dishware</div>
+<div class="line">:align: center</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">**This is a picture of some dish stuff**</div>
+<div class="line"><br /></div>
+</div>
+</dd>
+</dl>
+<p>The images are copied and managed into a subdirectory for distribution for you. You
+might want to segregate images as per the above example in a subdirectory,
+presumably of <strong>./source</strong></p>
+</div>
+</div>
+<div class="section" id="a-code-block-specifically-tweaked-for-html">
+<span id="codeblock1"></span><h2>A code block specifically tweaked for HTML<a class="headerlink" href="#a-code-block-specifically-tweaked-for-html" title="Permalink to this headline">¶</a></h2>
+<p>Everybody has no choice but to <strong>love</strong> HTML, right ?</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Blocks of languages etc can have captions too</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="offer-files-for-downloads">
+<span id="downloads1"></span><h2>Offer files for downloads<a class="headerlink" href="#offer-files-for-downloads" title="Permalink to this headline">¶</a></h2>
+<p>Download offered files use the dowenload keyword.</p>
+<p><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">little</span> <span class="pre">picture</span></code>.</p>
+<p>Probably this varies depending on what the file extension is, ( mime type )
+and browser settings.</p>
+<p>Also remember the export is a STATIC file copy. If you want to point to files
+that are dynamic, not part of a publishing action cycle, use URLS outside the
+hierarchy of this published act, or you will serve up stale files.</p>
+<p>This program leaves static files; ( but picks thru them with search, and adds the indexes for you ).
+Still, remember it makes static files in a fat package. Reaching out around the basket of goods is
+completely reasonable.</p>
+</div>
+<div class="section" id="iframe-using-raw-html">
+<span id="iframe1"></span><h2>IFRAME using raw HTML<a class="headerlink" href="#iframe-using-raw-html" title="Permalink to this headline">¶</a></h2>
+<p>The HTML tage IFRAME is hard to use well. Here it is embedding a UTUBE call:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe><p>Before you implement it, remember securities and so on mean its harder for the user to
+'get at' the URLed entity then offering them a click.</p>
+<p>Its messy to explain and offer both options .... Consider the user experience, not the ego idea
+your code is in the driver's set ! <strong>But it is there to use</strong>.</p>
+<p>Also the <strong>raw</strong> for HTML is probably a general ways to do many cute things. If you plan
+to use the set for LaTeX, remember if its HTML only is disappears from paper documents
+entirely.</p>
+</div>
+<div class="section" id="inline-roles">
+<span id="inlinevideo1"></span><h2>Inline Roles<a class="headerlink" href="#inline-roles" title="Permalink to this headline">¶</a></h2>
+<p>Inline Asterisk changes for BOLD and Italics are fine but there are more text presentation
+mods to apply. The bigger picture way is so called <strong>ROLES</strong> and of course they are inline
+with any active text. Like:</p>
+<div class="line-block">
+<div class="line"><a href="#id4"><span class="problematic" id="id5">:rolename:`Mary had a little lamb`</span></a>.</div>
+</div>
+<p>So, substitute the keyword below ( ex. <em>literal</em> ), for <strong>rolename</strong> as above, and will get the effect.</p>
+<p><strong>Docutils rules</strong> supports the following roles:</p>
+<ul class="simple">
+<li><p>emphasis – equivalent of <em>emphasis</em></p></li>
+<li><p>strong – equivalent of <strong>strong</strong></p></li>
+<li><p>literal – equivalent of <code class="docutils literal notranslate"><span class="pre">literal</span></code></p></li>
+<li><p>subscript – subscript text</p></li>
+<li><p>superscript – superscript text</p></li>
+<li><p>title-reference – for titles of books, periodicals, and other materials</p></li>
+</ul>
+<p>So this should make a emphasis <em>Different</em> it should be.</p>
+<p>Lets look at titles as in: <cite>Aesops Fables</cite> a book about kid stuff.</p>
+<p><strong>REMEMBER</strong> you need the funny backticks, not usual quotes!</p>
+</div>
+<div class="section" id="footnotes">
+<span id="footnotes1"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<p>Footnotes are examples of the sort of <strong>improvised syntax</strong> of this markup language. Since you do <strong>want</strong>
+to use this fancy stuff, this worked example is important. The ways its communicated here is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Clear example usage</p></li>
+<li><p>Screen shot of the .rst to do it.</p></li>
+</ul>
+</div></blockquote>
+<p>Since the place its <strong>called</strong> and where the text is <strong>defined</strong> are in different places dynamically
+in the source text, its not so easy to be sure you 'get it', so the screen print will help!</p>
+<p>The precedent is nearly identical to our plaintiff's situation <a class="footnote-reference brackets" href="#f1" id="id6">1</a> , which might help us in
+the proceeding tomorrow.</p>
+<div class="section" id="elsewhere">
+<span id="footnotesmore1"></span><h3>Elsewhere<a class="headerlink" href="#elsewhere" title="Permalink to this headline">¶</a></h3>
+<p>The reference <em>to</em> it can be used any number of times, and where it lands in the HTML is here
+the command <a href="#id7"><span class="problematic" id="id8">**</span></a>rubric* appears</p>
+<p>Various presenters like the style in the case discussed yesterday <a class="footnote-reference brackets" href="#f1" id="id9">1</a>, though it was in a
+different jurisdiction.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>Caulfield versus Baldwin (1994) 96 Cr App R 215.</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="happypictures/aboutfootnotes.jpg"><img alt="About footnotes" src="happypictures/aboutfootnotes.jpg" /></a>
+<p class="caption"><span class="caption-text"><strong>This is how Footnotes work</strong></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Important</strong> Of course usually the last part is at the bottom of a HTML page, like a paper page.
+What is an endnote versus footnote and how this helps re-use in LaTeX needs your attention to detail.</p>
+</div>
+</div>
+<div class="section" id="citations">
+<span id="citations1"></span><h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+<p>Citations are quite different looking then footnotes. Documents suggest avoiding Using leading numbers
+in the symbol names. Usable as per this example:</p>
+<p>The gas giant <a class="reference internal" href="#uatrn12002" id="id10"><span>[Uatrn12002]</span></a>, is more active then predicted from the current theory.</p>
+<dl class="citation">
+<dt class="label" id="uatrn12002"><span class="brackets"><a class="fn-backref" href="#id10">Uatrn12002</a></span></dt>
+<dd><p>Q'tahL-1997 Class 7 Gas giant</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="math">
+<span id="math1"></span><h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<p>Math inclusions:</p>
+<p><span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span></p>
+<p>There is a more involved way to invoke math inclusions. This is entry level for math stuffola.</p>
+</div>
+<div class="section" id="abbreviations">
+<span id="abbr1"></span><h2>Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h2>
+<p>Abbreviations have specific font support, like:</p>
+<p>Like :abbr: <cite>LASER (Light Amplification Stimulated Emission Radiation)</cite></p>
+</div>
+<div class="section" id="horizontal-lists">
+<span id="hhlist1"></span><h2>Horizontal lists<a class="headerlink" href="#horizontal-lists" title="Permalink to this headline">¶</a></h2>
+<p>Horizontal lists are easy enough:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>A list of</p></li>
+<li><p>short items</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>that should be</p></li>
+<li><p>displayed</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>horizontally</p></li>
+<li><p>sorts out nicely</p></li>
+</ul>
+</td></tr></table>
+<p><strong>Important:</strong> Look at the source file carefully to notice the double spaces on each
+element. It won't work unless its done like this exactly....</p>
+</div>
+<div class="section" id="adding-color">
+<span id="addcolor1"></span><h2>Adding color<a class="headerlink" href="#adding-color" title="Permalink to this headline">¶</a></h2>
+<p>The next obvious visual concept to consider is adding color for text, and maybe horizontal lines
+like the html tag &lt;hr&gt;.</p>
+<p>A subdirectory exists in most of these releases, in <strong>./source</strong> named <strong>addingcolor</strong> with how
+to do that.</p>
+<p>Note that formal documents generally do not, (and should not), <strong>require</strong> color to be usable.
+Making the 'system', work with color formally, involves stabilizing it as a system, because it
+involves add in pieces.  So if there isn't quite a commitment to doing that, its better to avoid
+it almost entirely for the moment; Rather then make construction of a little IDE more complex
+for what is not essential.</p>
+<p>The subdirectory is there for a reason... to enable the possibility with (hopefully),
+ease. So hack away if you like, but don't drag in a requirement for a frill.</p>
+<blockquote>
+<div><p>I would rather see a B &amp; W image (instead of one with a little color),
+then an error on the TTY about a missing file I don't quite understand.
+Or worse, <strong>struggle over a missing file which I can't find</strong>, during a last minute time crunch
+to do a thing!</p>
+</div></blockquote>
+</div>
+<div class="section" id="authorship-and-versioning">
+<span id="aboutwho1"></span><h2>Authorship and versioning<a class="headerlink" href="#authorship-and-versioning" title="Permalink to this headline">¶</a></h2>
+<p>I had nearly instance success with activating some functionality to neatly add named persons
+for 'who did this thing?' controls at the per .rst level. It involves a switch in the conf.py file;
+specifically that is variable: <strong>show_authors</strong> and setting it to True enables this neat thing. Of
+course, a fussy label line needs inclusion in the .rst too. I wanted it recorded here as an enabling
+thing to be known, that it's doable, its easy, and just works.</p>
+<p>But it drags in a vast array of subsidiary issues; it's premature to rely on it, so its counterproductive
+to do without scoping a decision about who does what where, Id's etc and that is a lot to tangle up
+a first instance of a system. Look up the variable in a google search with <strong>Sphinx</strong> and try it if you like.</p>
+</div>
+<div class="section" id="conclusion">
+<span id="concu1"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The real official manual for Python is around 500 pages as is kind of comp sci ultra dense, not easy to apply.
+Also, it meticulously integrates hundreds of version control changes for basically obsolete versions.</p>
+<p>This file is intended to get you into the ballpark for fancy output without all of that. But its there, for
+you, when you need it.</p>
+</div>
+</div>
+<div class="section" id="versioning-for-this-file-alone">
+<span id="verhelp1"></span><h1>Versioning - For this file alone<a class="headerlink" href="#versioning-for-this-file-alone" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-given docutils align-default" id="id15">
+<caption><span class="caption-text"><strong>Version and release datablock</strong></span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p># Ver</p></th>
+<th class="head"><p>Timestamp</p></th>
+<th class="head"><p>Venue</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Editor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.9.1</p></td>
+<td><p>23 Nov 2020 12:10 Z</p></td>
+<td><p>agentdbk on google cloud</p></td>
+<td><p>Teleconf chats</p></td>
+<td><p>Dan K</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.9.61</p></td>
+<td><p>27 Nov 2020 12:05 E</p></td>
+<td><p>agentdbk on google cloud</p></td>
+<td><p>Rollout support Ram S</p></td>
+<td><p>Dan K</p></td>
+</tr>
+<tr class="row-even"><td><p>0.9.62</p></td>
+<td><p>30 Nov 2020 11:08 E</p></td>
+<td><p>Dan K Toronto</p></td>
+<td><p>Rollout support Ram S</p></td>
+<td><p>Dan K</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>This table <strong>above</strong> is for <strong>Releases only</strong>, if you have other versioning
+concepts, use comments 'down here' inside the file.</p>
+</li>
+</ul>
+<p><strong>Document end</strong></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright Not asserted for this work
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
